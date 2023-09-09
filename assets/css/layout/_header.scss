@@ -1,0 +1,46 @@
+// header area css
+.header-area {
+  background-color: #ddd;
+
+  .header {
+    padding: 10px 0;
+    .logo {
+      width: 350px;
+      margin-right: 10px;
+      a {
+        display: block;
+        padding: 10px 30px;
+        font-size: 30px;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+      
+    }
+
+    .menu {
+      width: 840px;
+      ul{
+        li{
+          display: inline-block;
+
+          a {
+            display: block;
+            padding: 10px 30px;
+            text-transform: capitalize;
+            font-size: 18px;
+            &:hover{
+              color: $hover;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+ 

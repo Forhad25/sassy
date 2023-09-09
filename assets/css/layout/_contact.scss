@@ -1,0 +1,67 @@
+// contact address css
+.contact{
+  .contact-address{
+    .single-address{
+      width: 380px;
+      margin: 0 10px;
+      i {
+        font-size: 30px;
+        margin: 20px 0;
+      }
+      h4 {
+        font-size: 30px;
+        text-transform: capitalize;
+        span {
+          display: block;
+          font-size: 16px;
+          font-weight: 400;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+
+// contact form css
+
+.form {
+  width: 800px;
+  margin-right: 10px;
+  textarea {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #ddd;
+  }
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    &[type="submit"] {
+      width: 15%;
+      background: tomato;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+      &:hover{
+        background-color: $hover;
+        &:hover{
+          background-color: $primary_color;
+        }
+      }
+      
+    }
+   
+  }
+}
+
+.map {
+  width: 390px;
+  iframe {
+    width: 100%;
+    margin-left: 10px;
+    height: 246px;
+  }
+}

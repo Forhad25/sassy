@@ -1,0 +1,38 @@
+.blog-area{
+  .single-blog{
+    width: 383px;
+    margin: 0 10px;
+    border: 1px solid $dull;
+    background-color: $dull;
+    overflow: hidden;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover 
+    .blog-img {
+      transform: scale(1.1);
+    }
+
+    .blog-img {
+      background-position: center;
+      background-size: cover;
+      height: 250px;
+      
+    }
+    .blog-content{
+      padding: 20px;
+      h4 {
+        font-size: 25px;
+        text-transform: capitalize;
+        margin: 15px 0; 
+      }
+      p {
+        margin: 15px 0;
+      }
+    }
+  }
+}
+
+
+
+ 

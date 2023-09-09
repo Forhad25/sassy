@@ -1,0 +1,152 @@
+@import 'color';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: $black;
+  transition: .3s;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+img, video{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+// code for float
+
+.fix::after, 
+.fix::before{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// code for background
+
+.bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 2;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    opacity: .75;
+    z-index: -1;
+  }
+}
+
+// code for section title
+.section-title{
+   p {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 7%;
+    height: 2px;
+    background-color: tomato;
+    top: 50px;
+    left: 46%;
+    transform: translateX(-50%, -50%);
+  }
+  }
+}
+ 
+// code for button
+
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: capitalize;
+  border-radius: 3px;
+  color: $white;
+  &.box-btn{
+    background-color: $primary_color;
+    margin-right: 10px;
+    &:hover{
+      background-color: $black;
+    }
+  }
+  &.border-btn{
+    border: 3px solid $primary_color;
+    margin-left: 10px;
+    padding: 7px 30px ;
+    &:hover{
+      border-color: $black;
+    }
+  }
+}
+
+
+
+// margin and padding
+
+@for $i from 1 through 10{
+.pt-#{$i * 10}{
+  padding-top: 10px * $i;
+}
+}
+
+@for $i from 1 through 10{
+  .pb-#{$i * 10}{
+    padding-bottom: 10px * $i;
+  }
+}
+
+@for $i from 1 through 10{
+  .mt-#{$i * 10}{
+    margin-top: 10px * $i;
+  }
+}
+
+@for $i from 1 through 10{
+  .mb-#{$i * 10}{
+    margin-bottom: 10px * $i;
+  }
+}
+
+$list: left, right, center, justify;
+
+@each $i in $list{
+  .text-#{$i}{
+    text-align: $i;
+  }
+}
+
+$list: left, right;
+
+@each $i in $list{
+  .float-#{$i}{
+    float: $i;
+  }
+}
